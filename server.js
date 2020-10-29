@@ -17,7 +17,7 @@ fs.readFile('credentials.json', (err,content) => {
   authorize(JSON.parse(content)); //authorization
 })
 
-let oAuth2Cliet;
+let oAuth2Client;
 
 function authorize(credentials)
 {
@@ -37,7 +37,7 @@ oAuth2Client.setCredentials(JSON.parse(token))//set credentials
 
 
 //generate new token
-function getNewToekn(oAuth2Client)
+function getNewToken(oAuth2Client)
 {
   const authurl=oAuth2Client.generateAuthUrl({
     access_type: 'offline',
